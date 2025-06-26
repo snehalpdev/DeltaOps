@@ -1,0 +1,62 @@
+{
+  "name": "deltaops",
+  "version": "1.0.0",
+  "description": "Electron-wrapped AI-powered options strategy app with LLM and real-time market data support",
+  "main": "dist/electron/main.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && tsc",
+    "start": "next start",
+    "dev:all": "npm run build && npm run electron",
+    "electron": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && ts-node src/electron/main.ts\"",
+    "package": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snehalpdev/DeltaOps.git"
+  },
+  "keywords": [
+    "electron",
+    "llm",
+    "options",
+    "ai",
+    "trading",
+    "typescript"
+  ],
+  "author": "Snehal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snehalpdev/DeltaOps/issues"
+  },
+  "homepage": "https://github.com/snehalpdev/DeltaOps#readme",
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/electron": "^29.0.0",
+    "@types/node": "^24.0.4",
+    "@types/react": "^18.2.37",
+    "concurrently": "^8.2.2",
+    "electron": "^28.3.3",
+    "electron-builder": "^24.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.3",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.deltaops.app",
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
