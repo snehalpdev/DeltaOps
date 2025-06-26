@@ -1,0 +1,14 @@
+[
+  {
+    "label": "v1: Base prompt",
+    "template": "Describe an income-focused options strategy under neutral-to-bullish bias.",
+    "notes": "Used as the default for mid-IV conditions.",
+    "createdAt": "2025-06-24T09:00:00Z"
+  },
+  {
+    "label": "v2: ROC filter added",
+    "template": "Same as v1, but require ROC > 20% and IV Rank > 60.",
+    "notes": "Stronger screening for premium sellers.",
+    "createdAt": "2025-06-24T09:30:00Z"
+  }
+]
