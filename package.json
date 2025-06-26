@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "Electron-wrapped AI-powered options strategy app with LLM and real-time market data support",
   "main": "dist/electron/main.js",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build && tsc",
-    "start": "next start",
-    "dev:all": "npm run build && npm run electron",
-    "electron": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && ts-node src/electron/main.ts\"",
-    "package": "electron-builder"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build && tsc",
+  "start": "next start",
+  "dev:all": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && ts-node src/electron/main.ts\"",
+  "package": "electron-builder"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/snehalpdev/DeltaOps.git"
