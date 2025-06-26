@@ -1,0 +1,16 @@
+[
+  {
+    "generatedText": "Strategy A: Sell 1 OTM call (delta 0.25) and buy 1 further OTM call. ROC: 18%. IV: 24%, HV: 19%",
+    "createdAt": "2025-06-25T14:00:00Z",
+    "tag": "good",
+    "variant": "v1",
+    "score": 0.68
+  },
+  {
+    "generatedText": "Strategy B: Bull put spread with strike gap of 20. ROC: 21%. IV edge looks solid.",
+    "createdAt": "2025-06-25T14:10:00Z",
+    "tag": "needs_tuning",
+    "variant": "v2",
+    "score": 0.55
+  }
+]
